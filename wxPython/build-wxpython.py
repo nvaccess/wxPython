@@ -280,7 +280,9 @@ if sys.platform.startswith("win"):
         deleteIfExists(os.path.join(buildDir, "vc%s_msw%sdll" % (getVisCVersion(), dll_type)))
         sys.exit(0)
     
-          
+    DESTDIR = options.installdir
+    PREFIX = options.prefix
+    
 else:
     WXPY_BUILD_DIR = os.path.join(os.getcwd(), "wxpy-bld")
     
