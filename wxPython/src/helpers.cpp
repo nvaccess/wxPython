@@ -399,7 +399,7 @@ void wxPyApp::OnAssertFailure(const wxChar *file,
                 buf << wxT(" in ") << func << wxT("()");
             if (msg != NULL) 
                 buf << wxT(": ") << msg;
-            wxLogDebug(buf);
+            wxLogError(buf);
         }
 
         // do the normal wx assert dialog?
