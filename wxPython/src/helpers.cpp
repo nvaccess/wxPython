@@ -345,10 +345,10 @@ void wxPyApp::OnAssertFailure(const wxChar *file,
     wxPyBlock_t blocked = wxPyBeginBlockThreads();
     if ((found = wxPyCBH_findCallback(m_myInst, "OnAssert"))) {
         PyObject* fso = wx2PyString(file);
-        PyObject* cso = wx2PyString(file);
+        PyObject* cso = wx2PyString(cond);
         PyObject* mso;
         if (msg != NULL)
-            mso = wx2PyString(file);
+            mso = wx2PyString(msg);
         else {
             mso = Py_None; Py_INCREF(Py_None);
         }
